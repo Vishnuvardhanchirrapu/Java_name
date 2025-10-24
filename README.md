@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+     int[] arr = {1,3,5,2,7,3};
+    System.out.println(Arrays.toString(arr));
+	    System.out.print("Enter the number steps to rotate :"); //rigth rotation
+	    int n = sc.nextInt();
+	   
+	    
+     if(n==arr.length) {System.out.println(Arrays.toString(arr)); return; }
+     int[] arr1 = new int[arr.length]; // starting elements
+    
+        arr1 = Arrays.copyOfRange(arr,0,arr.length - n);
+       
+    
+    int[] arr2 = new int[arr.length]; // ending elements
+        arr2 = Arrays.copyOfRange(arr, arr.length - n,arr.length);
+        
+        
+    // arr = Arrays.copyOf(arr2,arr2.length);
+    //  System.out.println(Arrays.toString(arr));
+    for(int i = 0; i<arr2.length; i++){
+        arr[i] = arr2[i];
+    }
+        int x = n ;
+    for(int i= 0; i<arr1.length; i++){
+        arr[x] = arr1[i]; x++; }
+    System.out.println(Arrays.toString(arr));
+     
+	}
+}
