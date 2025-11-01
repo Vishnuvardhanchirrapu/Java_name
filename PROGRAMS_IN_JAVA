@@ -1,0 +1,26 @@
+// reversing the string without changing special characters position
+import java.util.*;
+public class Main{                                          // h@ello*o#
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        StringBuilder str = new StringBuilder(sc.nextLine());
+        int j = str.length() - 1;
+       
+        for(int i = 0; i <j && i<str.length();){
+        if((str.charAt(i)>=65 && str.charAt(i)<=90 ) || (str.charAt(i)>=97 && str.charAt(i)<=122 )== false ){
+            i++;
+        }
+       else if((str.charAt(j)>=65 && str.charAt(j)<=90) || (str.charAt(j)>=97 && str.charAt(j)<=122) == false ){
+           j--;
+       }
+       else {
+           char ch = str.charAt(i);
+           str.setCharAt(i,str.charAt(j));
+           str.setCharAt(j,ch);
+           i++; j--;
+       } 
+        }
+        System.out.println(str);
+    }
+}
