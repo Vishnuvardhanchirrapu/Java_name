@@ -1,0 +1,15 @@
+// sum of elements in the  SubArray
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] arr = {2,4,2,3,5,6,4,6,4,7,3};
+	     int[] PrefixSum = new int[arr.length];
+	     PrefixSum[0] =  arr[0];
+	    for(int i = 1; i<arr.length; i++)
+	    PrefixSum[i] = arr[i] + PrefixSum[i-1];
+	    
+	    System.out.println("PrefixSum Array is : "+Arrays.toString(PrefixSum));
+	}
+}
