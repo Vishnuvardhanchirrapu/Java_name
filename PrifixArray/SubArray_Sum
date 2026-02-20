@@ -1,0 +1,14 @@
+// sum of elements in the  SubArray
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] arr = {2,4,2,3,5,6,4,6,4,7,3};
+	    System.out.println("Enter the range : ");
+	    Scanner sc = new Scanner(System.in);
+	    int x = sc.nextInt(); int y = sc.nextInt(); int sum = 0;
+	    for(int i = x; i<= y; i++)
+	    sum += arr[i];
+	    System.out.println("Sum of elements int the given range is : "+sum);
+	}
+}
