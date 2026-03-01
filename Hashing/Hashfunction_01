@@ -1,0 +1,30 @@
+import java.util.HashMap;
+
+public class Demo_53{
+    
+    public static int sumC(int[] arr, int target){
+       HashMap<Integer, Integer> map = new HashMap<>();
+       int c = 0; int sum = 0;
+       map.put(0, 1);
+       for(int num : arr){
+           sum += num;
+           if(map.containsKey(sum - target)){
+               c += map.get(sum - target);
+           }
+           map.put(sum, map.getOrDefault(sum, 0)+1);
+       }
+    //    System.out.println(map.keySet());
+    //    System.out.println(map.values());
+    //    System.out.println(map.containsKey(8));
+    //    System.out.println(map.containsValue(1));
+    //    System.out.println(map.containsKey(85));
+    //    System.out.println(map.containsValue(10));
+        return c;
+    }
+    
+    public static void main(String...args){
+        int[] arr = {1,2,3,1,1};
+        int c = sumC(arr, 2);
+        System.out.println("Number of substrings with sum 2: "+c);
+    }
+} 
