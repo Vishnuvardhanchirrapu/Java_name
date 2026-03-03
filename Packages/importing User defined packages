@@ -1,0 +1,8 @@
+// importing user defined Packages
+import Pack2.Myclass;
+public class Package_Demo_01{
+    public static void main(String[] args) {
+        Myclass b = new Myclass();
+        b.msge();
+    }
+}
