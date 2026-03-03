@@ -1,0 +1,11 @@
+// Packages with same class name 
+// import Pack1.*;
+// import Pack2.*;
+public class Package_Demo_01{
+    public static void main(String[] args) {
+        Pack1.Myclass a =  new Pack1.Myclass();
+        Pack2.Myclass b = new Pack2.Myclass();
+        a.msg();
+        b.msge();
+    }
+}
