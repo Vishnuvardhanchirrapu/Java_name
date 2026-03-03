@@ -1,0 +1,12 @@
+// Static class in java....
+public  class Package_Demo_01 {
+    static class Demo111{
+          static int sqrt(int x){
+            return x*x;
+          }
+    }
+    public static void main(String[] args) {
+      int x =   Demo111.sqrt(5);
+      System.err.println("Square: "+x);
+    }
+}
