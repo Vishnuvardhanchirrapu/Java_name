@@ -1,0 +1,15 @@
+public class Demo_70 {
+    public static void main(String...args){
+        System.out.println("Welcome to java");
+        int[] arr = {3,5,2,6,3,9,7};
+        int i = 0,j= arr.length -1;
+        System.err.println("Current Array: "+java.util.Arrays.toString(arr));
+         while(i<j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++; j--;
+         }
+         System.err.println("Reverse Array: "+java.util.Arrays.toString(arr));
+    }
+}
