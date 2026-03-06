@@ -1,0 +1,17 @@
+// remove duplicate in sorted array
+public class Demo_70 {
+    public static void main(String...args){
+       int[] arr = {6,32,6,2,6,2,56,2};
+       java.util.Arrays.sort(arr);
+       int i = 0;
+       for(int j = 1; j<arr.length; j++){
+        if(arr[j] != arr[i]){
+            i++;
+            arr[i] = arr[j];
+        }
+       }
+       for(int x = 0; x<=i; x++){
+        System.err.print(arr[x]+" ");
+       }
+    }
+}
