@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayList01
+{
+	public static void main(String[] args) {
+		System.out.println("..............Welcome to java ..............");
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		System.out.println(list.get(0));
+		System.out.println(list);
+		list.set(0, 50);
+		System.out.println(list);
+		list.remove(1);
+		System.out.println(list);
+		System.out.println(list.size());
+		Integer[] arr = list.toArray(new Integer[list.size()]);
+		System.out.println(Arrays.toString(arr));
+		System.out.println(".............. Program Ended  ..............");
+	}
+}
+/*
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+	     ArrayList<String> list = new ArrayList<>();
+	     
+	     list.add("Ramulu");
+	     char[] ch = list.get(0).toCharArray();
+	     for(char ch1 : ch)
+	     System.out.print(ch1+" ");
+	     list.add("5014");
+	     System.out.println();
+	     System.out.println(list);
+	     Integer x = Integer.valueOf(list.get(1));
+	     System.out.println(x/10);
+	}
+}
+
+*/
